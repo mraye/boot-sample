@@ -11,6 +11,8 @@
 
     <modules>
         <module>boot-quartz</module>
+        <module>boot-security-jwt</module>
+        <module>boot-security-ldap</module>
     </modules>
 
 

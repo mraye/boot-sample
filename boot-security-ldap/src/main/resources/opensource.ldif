@@ -1,0 +1,75 @@
+version: 1
+# tom: 1234
+# jhon 1111
+# tony: 2222
+
+dn: cn=Jhon Doe,ou=hr,ou=account,dc=opensource,dc=com
+objectClass: inetOrgPerson
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+cn: Jhon Doe
+sn: Doe
+telephoneNumber: 18746789098
+title: hr
+uid: Jhon
+userPassword:: e1NIQX1BUnlVWHpET0xMcjhSUzg1aEE4Q1ZwTXpuRUk9
+
+dn: cn=Tom Gor,ou=develop,ou=account,dc=opensource,dc=com
+objectClass: inetOrgPerson
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+cn: Tom Gor
+sn: Gor
+uid: Tom
+userPassword:: e1NIQX1oby8rNUZCaVhTQU9zRFl5bGwwSnZoQ2VTQVU9
+
+dn: ou=hr,ou=account,dc=opensource,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: hr
+
+dn: ou=account,dc=opensource,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: account
+
+dn: ou=develop,ou=account,dc=opensource,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: develop
+
+dn: cn=ROLE_USER,ou=roles,dc=opensource,dc=com
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: ROLE_USER
+uniqueMember: cn=Tom Gor,ou=develop,ou=account,dc=opensource,dc=com
+
+dn: ou=roles,dc=opensource,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: roles
+
+dn: cn=Tony Dude,ou=hr,ou=account,dc=opensource,dc=com
+objectClass: inetOrgPerson
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+cn: Tony Dude
+sn: Tony
+uid: tony
+userPassword:: e1NIQX0vcWYyVi9WcUtrU05wOVMxTmU1ZUo1eXZQWm89
+
+dn: cn=ROLE_ADMIN,ou=roles,dc=opensource,dc=com
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: ROLE_ADMIN
+uniqueMember: cn=Jhon Doe,ou=hr,ou=account,dc=opensource,dc=com
+uniqueMember: cn=Tony Dude,ou=hr,ou=account,dc=opensource,dc=com
+
+dn: dc=opensource,dc=com
+objectclass: top
+objectclass: domain
+dc: opensource
+

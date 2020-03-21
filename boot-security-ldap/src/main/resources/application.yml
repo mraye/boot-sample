@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: boot-security-ldap
+  thymeleaf:
+    enabled: true
+    encoding: UTF-8
+    mode: HTML5
+    suffix: .html
+
+server:
+  port: 8080
+
+
+ldap:
+  server:
+    first:
+      base: dc=opensource,dc=com
+      userDn: uid=admin,ou=system
+      password: 111111
+      url: ldap://192.168.199.234:10389/
+      groupSearchBase: ou=roles
+    second:
+      base: dc=springframework,dc=org
+      userDn: uid=admin,ou=system
+      password: 111111
+      url: ldap://192.168.199.234:10389/
+      groupSearchBase: ou=groups

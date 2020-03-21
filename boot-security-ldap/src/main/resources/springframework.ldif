@@ -1,0 +1,83 @@
+version: 1
+# bob: 1234
+# ben: 1111
+
+dn: ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: cn=ROLE_USER,ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: ROLE_USER
+uniqueMember: uid=ben,ou=people,dc=springframework,dc=org
+uniqueMember: uid=bob,ou=people,dc=springframework,dc=org
+ou: developer
+
+dn: ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: ou=subgroups,ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: subgroups
+
+dn: uid=bob,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: inetOrgPerson
+objectclass: person
+objectclass: organizationalPerson
+cn: Bob Hamilton
+sn: Hamilton
+uid: bob
+userPassword:: e1NIQX1jUkR0cE5DZUJpcWw1S09Rc0tWeXJBMHNBaUE9
+
+dn: ou=otherpeople,dc=springframework,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: otherpeople
+
+dn: uid=joe,ou=otherpeople,dc=springframework,dc=org
+objectclass: top
+objectclass: inetOrgPerson
+objectclass: person
+objectclass: organizationalPerson
+cn: Joe Smeth
+sn: Smeth
+uid: joe
+userPassword:: e1NTSEF9ZDlzak5uSXIxZ3lOL2ZyYzB1Q1dwcWZEUEJvMlhsSGRBZVRDWFE9P
+ Q==
+
+dn: uid=ben,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: inetOrgPerson
+objectclass: person
+objectclass: organizationalPerson
+cn: Ben Alex
+sn: Alex
+uid: ben
+userPassword:: e1NIQX1BUnlVWHpET0xMcjhSUzg1aEE4Q1ZwTXpuRUk9
+
+dn: cn=ROLE_ADMIN,ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: ROLE_ADMIN
+uniqueMember: uid=ben,ou=people,dc=springframework,dc=org
+uniqueMember: cn=mouse\, jerry,ou=people,dc=springframework,dc=org
+ou: manager
+
+dn: cn=submanagers,ou=subgroups,ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: submanagers
+uniqueMember: uid=ben,ou=people,dc=springframework,dc=org
+ou: submanager
+
+dn: dc=springframework,dc=org
+objectclass: top
+objectclass: domain
+dc: springframework
+
