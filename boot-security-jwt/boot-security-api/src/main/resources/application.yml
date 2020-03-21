@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: boot-security-api
+  redis:
+    host: localhost
+    port: 6379
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 111111
+  http:
+    encoding:
+      enabled: true
+      force: true
+      charset: UTF-8
+
+
+server:
+  port: 8080
+
+
+
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  type-aliases-package: com.github.vspro.**.persistent.domain
+  mapper-locations: classpath*:mapping/**/*.xml
+
+jwt-token:
+  # 默认token 2小时
+  accessTokenDt: 7200
+  # 刷新token默认 1天
+  refreshTokenDt: 86400
+
+
+
+
